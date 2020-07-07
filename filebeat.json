@@ -1,0 +1,31 @@
+{
+    "version": "7.8.0",
+    "description": "Lightweight shipper for logs",
+    "homepage": "https://www.elastic.co/beats/filebeat",
+    "license": {
+        "identifier": "Freeware|Apache-2.0",
+        "url": "https://github.com/elastic/beats/blob/master/LICENSE.txt"
+    },
+    "url": "https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.8.0-windows-x86_64.zip",
+    "hash": "sha512:4bb863efe3f438ec31e57e2039dde9f5d283e610c1ff8dbee3d56712bc7958285eb665a9e094cb956fd0d733a74f91b121949b3229c30f46f62915ade7cde75f",
+    "extract_dir": "filebeat-7.8.0-windows-x86_64",
+    "bin": [
+        "filebeat.exe",
+        "install-service-filebeat.ps1",
+        "uninstall-service-filebeat.ps1"
+    ],
+    "persist": [
+        "filebeat.yml"
+    ],
+    "checkver": {
+        "url": "https://www.elastic.co/downloads/beats/filebeat",
+        "regex": "filebeat-([\\d\\.]+)-windows"
+    },
+    "autoupdate": {
+        "url": "https://artifacts.elastic.co/downloads/beats/filebeat-$version-windows-x86_64.zip",
+        "hash": {
+            "url": "$url.sha512"
+        },
+        "extract_dir": "filebeat-$version-windows-x86_64"
+    }
+}
